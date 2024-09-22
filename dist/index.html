@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S ONE TRUCK 888</title>
+    <link rel="shortcut icon" href="media/logos/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              purple: {
+                darkest: "#17153B",
+                dark: "#2E236C",
+                medium: "#433D8B",
+                light: "#FFFFFF",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Anuphan", sans-serif;
+        position: relative; /* สำหรับการวางพื้นหลังแบบ absolute */
+        overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอนเมื่อใช้ clip-path */
+      }
+      .bg-gradient {
+        background: linear-gradient(135deg, #17153b, #2e236c);
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .animate-pulse-custom {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .logo-background {
+        position: relative;
+      }
+      .logo-background::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.2;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .logo-content {
+        position: relative;
+        z-index: 1;
+      }
+      /* พื้นหลังแบบพอลิกอน */
+      .custom-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("media/img/background.png");
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        opacity: 0.3; /* ปรับความโปร่งแสงตามต้องการ */
+        z-index: -1; /* อยู่ด้านหลังเนื้อหา */
+      }
+      /* สำหรับหน้าจอเล็ก ให้ปรับ clip-path */
+      @media (max-width: 768px) {
+        .custom-background {
+          clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient text-purple-light min-h-screen flex flex-col relative"
+  >
+    <!-- พื้นหลังแบบพอลิกอน -->
+    <div class="custom-background"></div>
+
+    <nav
+      class="bg-purple-darkest bg-opacity-90 p-4 shadow-lg sticky top-0 z-50 backdrop-filter backdrop-blur-lg"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <h1 class="text-2xl font-bold">S ONE TRUCK 888</h1>
+        </div>
+        <div class="space-x-4">
+          <a
+            href="#"
+            class="text-purple-light hover:text-purple-medium transition duration-300"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-purple-light hover:text-purple-medium transition duration-300"
+            >Contract</a
+          >
+          <a
+            href="#"
+            class="text-purple-light hover:text-purple-medium transition duration-300"
+            >Careers</a
+          >
+          <button
+            class="bg-purple-medium text-purple-darkest px-4 py-2 rounded-md hover:bg-purple-light transition duration-300 font-bold"
+          >
+            Staff
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto mt-8 p-4 flex-grow relative z-10">
+      <div
+        class="bg-purple-dark bg-opacity-70 rounded-lg p-6 shadow-2xl backdrop-blur-sm"
+      >
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center mb-8"
+        >
+          <div class="flex items-center mb-4 sm:mb-0">
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-purple-light"
+            >
+              S One Transport 888 Co., Ltd.
+            </h1>
+          </div>
+          <div class="flex items-center">
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-purple-light"
+            >
+              Giraffe Container Co., Ltd.
+            </h1>
+          </div>
+        </div>
+        <div class="flex items-center mb-8">
+          <img
+            src="media/img/truck2.png"
+            alt="Truck icon"
+            class="mr-4 animate-float"
+            width="100"
+          />
+          <p class="text-2xl text-purple-light">
+            ให้บริการรถเทรลเลอร์บรรทุกตู้คอนเทนเนอร์
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <div
+              class="bg-purple-medium bg-opacity-70 rounded-lg p-4 hover:bg-purple-light hover:text-purple-darkest transition duration-300"
+            >
+              <span
+                class="bg-purple-light text-purple-darkest text-xs px-2 py-1 rounded mr-2 font-bold animate-pulse-custom"
+                >NEWS</span
+              >
+              <p class="text-lg mt-2">บริการรับฝากตู้คอนเทนเนอร์</p>
+            </div>
+            <div
+              class="bg-purple-medium bg-opacity-70 rounded-lg p-4 hover:bg-purple-light hover:text-purple-darkest transition duration-300"
+            >
+              <span
+                class="bg-purple-light text-purple-darkest text-xs px-2 py-1 rounded mr-2 font-bold animate-pulse-custom"
+                >NEWS</span
+              >
+              <p class="text-lg mt-2">
+                ตัวแทนให้บริการ MatchBox Exchange<br />(การใช้ซ้ำและแลกเปลี่ยนตู้คอนเทนเนอร์)
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div
+              class="bg-purple-light text-purple-darkest p-6 rounded-lg shadow-xl card-hover flex flex-col justify-between"
+            >
+              <div>
+                <h2 class="font-bold mb-3 text-purple-dark text-xl">
+                  Transport Tracking
+                </h2>
+                <p class="text-sm mb-4 text-purple-darkest">
+                  Container, Bill of lading or Booking Number
+                </p>
+              </div>
+              <a
+                href="https://thistruck.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block bg-purple-medium text-purple-light px-6 py-2 rounded-full hover:bg-purple-dark transition duration-300 text-center"
+              >
+                เข้าสู่ระบบ
+              </a>
+            </div>
+            <div
+              class="bg-purple-light text-purple-darkest p-6 rounded-lg shadow-xl card-hover flex flex-col justify-between"
+            >
+              <div>
+                <h2 class="font-bold mb-3 text-purple-dark text-xl">
+                  Match Container Tracking
+                </h2>
+                <p class="text-sm mb-4 text-purple-darkest">
+                  Our new service is on the way!
+                </p>
+              </div>
+              <div
+                class="bg-purple-medium text-purple-light px-6 py-2 rounded-full font-bold text-center animate-pulse-custom"
+              >
+                Coming Soon
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-purple-darkest text-purple-light py-12 mt-12 relative z-10 bg-opacity-90"
+    >
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12"
+      >
+        <div
+          class="logo-background bg-purple-dark bg-opacity-70 p-6 rounded-lg shadow-lg"
+        >
+          <div class="logo-content space-y-4">
+            <h3 class="text-2xl font-bold text-purple-light mb-4">
+              S One Transport 888 Co., Ltd.
+            </h3>
+            <p>เลขที่ 50/18 ม.1 ต.ตะเคียนเตี้ย อ.บางละมุง จ.ชลบุรี 20150</p>
+            <p class="font-bold text-purple-medium">
+              เลขประจําตัวผู้เสียภาษี : 0215565003529 (สำนักงานใหญ่)
+            </p>
+            <p class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                />
+              </svg>
+              065-914-4536
+            </p>
+            <p class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                />
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                />
+              </svg>
+              sonetransport888@gmail.com
+            </p>
+          </div>
+        </div>
+        <div
+          class="logo-background bg-purple-dark bg-opacity-70 p-6 rounded-lg shadow-lg"
+        >
+          <div class="logo-content space-y-4">
+            <h3 class="text-2xl font-bold text-purple-light mb-4">
+              Giraffe Container Co., Ltd.
+            </h3>
+            <p>เลขที่ 50/18 ม.1 ต.ตะเคียนเตี้ย อ.บางละมุง จ.ชลบุรี 20150</p>
+            <p class="font-bold text-purple-medium">
+              เลขประจําตัวผู้เสียภาษี : 0205567019082 (สำนักงานใหญ่)
+            </p>
+            <p class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                />
+              </svg>
+              065-914-4536
+            </p>
+            <p class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                />
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                />
+              </svg>
+              giraffecontainer@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".logo-background").forEach((box, index) => {
+      if (index === 0) {
+        box.style.setProperty("--logo-url", 'url("media/img/sOneLogo.png")');
+      } else if (index === 1) {
+        box.style.setProperty("--logo-url", 'url("media/img/GiraffeLogo.png")');
+      }
+    });
+  });
+</script>
+
+<style>
+  .logo-background::before {
+    background-image: var(--logo-url);
+  }
+</style>
