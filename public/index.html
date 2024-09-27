@@ -46,7 +46,7 @@
         <div class="flex items-center space-x-4">
           <h1 class="text-2xl font-bold">S ONE TRUCK 888</h1>
         </div>
-        <div class="space-x-4">
+        <div class="flex items-center space-x-4">
           <a
             href="#"
             class="text-purple-light hover:text-purple-medium transition duration-300"
@@ -67,6 +67,143 @@
           >
             Staff
           </button>
+          <div class="relative inline-block text-left" style='display: none;'>
+            <button
+              type="button"
+              class="inline-flex justify-center w-full rounded-md border border-purple-light shadow-sm px-4 py-2 bg-purple-darkest text-sm font-medium text-purple-light hover:bg-purple-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-darkest focus:ring-purple-light"
+              id="language-menu-button"
+            >
+              Language
+              <svg
+                class="-mr-1 ml-2 h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-purple-darkest ring-1 ring-black ring-opacity-5 hidden"
+              id="language-menu-items"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="language-menu-button"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-purple-light hover:bg-purple-dark flex items-center"
+                  role="menuitem"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 900 600"
+                  >
+                    <rect width="900" height="600" fill="#ED1C24" />
+                    <rect width="900" height="300" fill="#FFFFFF" />
+                    <rect width="900" height="200" fill="#241D4F" />
+                  </svg>
+                  ไทย
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-purple-light hover:bg-purple-dark flex items-center"
+                  role="menuitem"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 60 30"
+                  >
+                    <clipPath id="s">
+                      <path d="M0,0 v30 h60 v-30 z" />
+                    </clipPath>
+                    <clipPath id="t">
+                      <path
+                        d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"
+                      />
+                    </clipPath>
+                    <g clip-path="url(#s)">
+                      <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                      <path
+                        d="M0,0 L60,30 M60,0 L0,30"
+                        stroke="#fff"
+                        stroke-width="6"
+                      />
+                      <path
+                        d="M0,0 L60,30 M60,0 L0,30"
+                        clip-path="url(#t)"
+                        stroke="#C8102E"
+                        stroke-width="4"
+                      />
+                      <path
+                        d="M30,0 v30 M0,15 h60"
+                        stroke="#fff"
+                        stroke-width="10"
+                      />
+                      <path
+                        d="M30,0 v30 M0,15 h60"
+                        stroke="#C8102E"
+                        stroke-width="6"
+                      />
+                    </g>
+                  </svg>
+                  English
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-purple-light hover:bg-purple-dark flex items-center"
+                  role="menuitem"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 900 600"
+                  >
+                    <rect width="900" height="600" fill="#DE2910" />
+                    <g fill="#FFDE00">
+                      <path
+                        d="M5,20 219,219v46l-214,214h35l214-214v-35l-214-214v-2z"
+                      />
+                      <path d="M223,19 345,141h-37l-84-84v-38z" />
+                      <path d="M223,321 345,199h-37l-84,84v38z" />
+                      <path
+                        d="M221,15 345,96v32l-124,123v-36l 82-84v-33l-82-83z"
+                      />
+                      <path
+                        d="M221,325 345,244v-32l-124-123v36l 82,84v33l-82,83z"
+                      />
+                    </g>
+                  </svg>
+                  中文
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-purple-light hover:bg-purple-dark flex items-center"
+                  role="menuitem"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 900 600"
+                  >
+                    <rect width="900" height="600" fill="#FFFFFF" />
+                    <circle cx="450" cy="300" r="180" fill="#BC002D" />
+                  </svg>
+                  日本語
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -218,7 +355,7 @@
       class="bg-purple-darkest text-purple-light py-12 mt-1 relative z-10 bg-opacity-90"
     >
       <div
-        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12"
+        class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12"
       >
         <div
           class="logo-background bg-purple-dark bg-opacity-70 p-6 rounded-lg shadow-lg"
@@ -228,7 +365,7 @@
               S One Transport 888 Co., Ltd.
             </h3>
             <p>เลขที่ 50/18 ม.1 ต.ตะเคียนเตี้ย อ.บางละมุง จ.ชลบุรี 20150</p>
-            <p class="font-bold text-purple-medium">
+            <p class="font-bold text-purple-light">
               เลขประจําตัวผู้เสียภาษี : 0215565003529 (สำนักงานใหญ่)
             </p>
             <p class="flex items-center">
@@ -258,8 +395,19 @@
                   d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
                 />
               </svg>
-              sonetransport888@gmail.com
+              cs_team@sonetransport888.com
             </p>
+            <div class="mt-4" style="border-radius: 15px; overflow: hidden">
+              <iframe
+                width="100%"
+                height="200"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBX7rwnnt0pIa3RvLoje2jzlFklzYDuaU8&q=S+ONE+TRANSPORT+888+CO.,+LTD"
+              >
+              </iframe>
+            </div>
           </div>
         </div>
         <div
@@ -270,7 +418,7 @@
               Giraffe Container Co., Ltd.
             </h3>
             <p>เลขที่ 50/18 ม.1 ต.ตะเคียนเตี้ย อ.บางละมุง จ.ชลบุรี 20150</p>
-            <p class="font-bold text-purple-medium">
+            <p class="font-bold text-purple-light">
               เลขประจําตัวผู้เสียภาษี : 0205567019082 (สำนักงานใหญ่)
             </p>
             <p class="flex items-center">
@@ -302,32 +450,71 @@
               </svg>
               giraffecontainer@gmail.com
             </p>
+            <div class="mt-4" style="border-radius: 15px; overflow: hidden">
+              <iframe
+                width="100%"
+                height="200"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBX7rwnnt0pIa3RvLoje2jzlFklzYDuaU8&q=Giraffe+Container+Co.,+Ltd"
+              >
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        effect: "fade",
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
+      $(document).ready(function () {
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          effect: "fade",
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+        });
+        // Toggle language menu
+        $("#language-menu-button").click(function (e) {
+          e.stopPropagation();
+          $("#language-menu-items").toggleClass("hidden");
+        });
+
+        // Close menu when clicking outside
+        $(document).click(function () {
+          $("#language-menu-items").addClass("hidden");
+        });
+
+        // Prevent menu from closing when clicking inside it
+        $("#language-menu-items").click(function (e) {
+          e.stopPropagation();
+        });
+
+        // Handle language selection
+        $("#language-menu-items a").click(function (e) {
+          e.preventDefault();
+          var selectedLanguage = $(this).text().trim();
+          $("#language-menu-button").text(selectedLanguage);
+          $("#language-menu-items").addClass("hidden");
+          // Here you can add code to change the website's language
+          console.log("Selected language:", selectedLanguage);
+        });
       });
     </script>
   </body>
